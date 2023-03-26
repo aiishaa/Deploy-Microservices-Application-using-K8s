@@ -8,12 +8,12 @@ This project implements Google's cloud-native microservices application by deplo
 
 ## Features
 
-- Deploys the microservices architecture without having to register at Google's Cloud Platform
-- Uses ReplicaSets for availability
+- Created YAML file with 11 Deployment and corresponding Service manifests
+- Created a Namespace and deployed all the micro services into it
+- Configure more than 1 Replica for each Deployments for availability
 - Pulls images from Google Cloud Container Registry and Docker Hub if necessary
-- Monitors Pod health with Liveness and Readiness Probes
-- Deploys Redis for caching
-- Showcases Resource Requests
+- Monitors containers health with Liveness and Readiness Probes
+- Configured Resource Requests and Resource Limits
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Install kubectl (I used [minikube](https://github.com/kubernetes/minikube)), [He
 
 ## Installation
 
-To get started, spin up a local Kubernetes cluster, or export the config of your cloud-based Kubernetes cluster (I use Linode) to your OS path variable to get access with `kubectl`.
+To get started, spin up a local Kubernetes cluster, or export the config of your cloud-based Kubernetes cluster to your OS path variable to get access with `kubectl`.
 
 In the project directory, simply use `helmfile sync helmfile.yaml` to deploy all Kubernetes components into your K8s cluster.
 
